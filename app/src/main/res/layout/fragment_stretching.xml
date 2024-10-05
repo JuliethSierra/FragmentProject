@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StretchingFragment">
+    <!-- Layout para el título de la actividad y mensaje -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="200dp"
+        >
+
+        <!-- Título de la actividad -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estiramientos"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_500"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Layout para el botón -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="400dp"
+        >
+        <!-- Botón para ver la estiramientos -->
+        <Button
+            android:id="@+id/viewInitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al inicio"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple_200"
+            android:textColor="#FFFFFF"/>
+
+        <!-- Botón para ver la rutina -->
+        <Button
+            android:id="@+id/viewRoutineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver rutina"
+            android:textSize="18sp"
+            android:backgroundTint="@color/purple_200"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</FrameLayout>

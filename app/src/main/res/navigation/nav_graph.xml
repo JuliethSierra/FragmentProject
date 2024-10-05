@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/initFragment"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/initFragment"
+        android:name="com.example.fragmentproject.InitFragment"
+        android:label="Init Fragment"
+        tools:layout="@layout/fragment_init" >
+        <action
+            android:id="@+id/action_initFragment_to_routineFragment"
+            app:destination="@id/routineFragment" />
+        <action
+            android:id="@+id/action_initFragment_to_stretchingFragment"
+            app:destination="@id/stretchingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/routineFragment"
+        android:name="com.example.fragmentproject.RoutineFragment"
+        android:label="fragment_routine"
+        tools:layout="@layout/fragment_routine" >
+        <action
+            android:id="@+id/action_routineFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+        <action
+            android:id="@+id/action_routineFragment_to_stretchingFragment"
+            app:destination="@id/stretchingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stretchingFragment"
+        android:name="com.example.fragmentproject.StretchingFragment"
+        android:label="fragment_stretching"
+        tools:layout="@layout/fragment_stretching" >
+        <action
+            android:id="@+id/action_stretchingFragment_to_initFragment"
+            app:destination="@id/initFragment" />
+        <action
+            android:id="@+id/action_stretchingFragment_to_routineFragment"
+            app:destination="@id/routineFragment" />
+    </fragment>
+
+</navigation>
