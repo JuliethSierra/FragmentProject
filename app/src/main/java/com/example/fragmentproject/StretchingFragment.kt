@@ -17,7 +17,6 @@ class StretchingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflar el layout usando View Binding
         _binding = FragmentStretchingBinding.inflate(inflater, container, false)
         return binding.root
     }
