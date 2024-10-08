@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">FragmentProject</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Strength_routine">Rutina de fuerza</string>
+    <string name="stretching">Estiramientos</string>
+    <string name="stretching1">Estiramiento de cuádriceps</string>
+    <string name="stretching2">Estiramiento de isquiotibiales</string>
+    <string name="stretching3">Estiramiento de aductores</string>
+    <string name="stretching4">Estiramiento de gemelos</string>
+    <string name="stretching5">Estiramiento de glúteos</string>
+    <string name="back">Volver al inicio</string>
+    <string name="Routine">Ver Rutina</string>
+    <string name="Routine1">Ver Hip Thrust (Elevación de cadera con barra)</string>
+    <string name="Routine2">Peso Muerto con Piernas Rígidas (Stiff-Legged Deadlift)</string>
+    <string name="Routine3">Step-Ups (Subidas a banco con peso)</string>
+    <string name="Routine4">Sentadillas (Squats)</string>
+    <string name="Routine5">Elevación de Talones (Calf Raises)</string>
 </resources>

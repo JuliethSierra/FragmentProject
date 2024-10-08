@@ -3,59 +3,192 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".RoutineFragment">
 
-    <!-- Layout para el título de la actividad y mensaje -->
-    <LinearLayout
-        android:id="@+id/contentLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="200dp"
-        >
+        android:layout_height="match_parent">
 
-        <!-- Título de la actividad -->
-        <TextView
-            android:id="@+id/title"
+        <LinearLayout
+            android:id="@+id/titleLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rutina de fuerza"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/purple_500"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
-    <!-- Layout para el botón -->
-    <LinearLayout
-        android:id="@+id/buttonLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="400dp"
-        >
-        <!-- Botón para ver la estiramientos -->
-        <Button
-            android:id="@+id/viewInitButton"
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rutina de fuerza"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/purple_500"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <!-- Estiramientos -->
+        <LinearLayout
+            android:id="@+id/stretchLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/titleLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+            android:layout_margin="16dp">
+
+            <!-- Estiramiento 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/routin1"
+                    android:contentDescription="Imagen de estiramiento de pierna 1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Routine1"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Estiramiento 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/routine2"
+                    android:contentDescription="Imagen de estiramiento de pierna 2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Routine2"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Estiramiento 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/routine3"
+                    android:contentDescription="Imagen de estiramiento de pierna 3"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Routine3"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Estiramiento 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/routine4"
+                    android:contentDescription="Imagen de estiramiento de pierna 4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Routine4"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+
+            <!-- Estiramiento 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/routine5"
+                    android:contentDescription="Imagen de estiramiento de pierna 5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Routine5"
+                    android:textSize="18sp"
+                    android:layout_marginStart="16dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Layout para los botones -->
+        <LinearLayout
+            android:id="@+id/buttonLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Volver al inicio"
-            android:textSize="18sp"
-            android:backgroundTint="@color/purple_200"
-            android:textColor="#FFFFFF"/>
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/stretchLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
 
-        <!-- Botón para ver la rutina -->
-        <Button
-            android:id="@+id/viewStretchingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ver Estiramientos"
-            android:textSize="18sp"
-            android:backgroundTint="@color/purple_200"
-            android:textColor="#FFFFFF"/>
+            <!-- Botón para volver al inicio -->
+            <Button
+                android:id="@+id/viewInitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volver al inicio"
+                android:textSize="18sp"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="#FFFFFF"/>
 
-    </LinearLayout>
+            <!-- Botón para ver los estiramientos -->
+            <Button
+                android:id="@+id/viewStretchingButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ver Estiramientos"
+                android:textSize="18sp"
+                android:backgroundTint="@color/teal_700"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
